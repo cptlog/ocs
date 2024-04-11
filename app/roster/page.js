@@ -8,7 +8,7 @@ const Group = ({ group }) => {
                 <div key={member.name} className='bg-stone-800'>
 
                     <header className='h-28 w-full' style={{
-                        backgroundImage: `url(/img/portrait_${member.name}.png)`,
+                        backgroundImage: `url(/ocs/img/portrait_${member.name}.png)`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}>
