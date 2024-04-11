@@ -1,0 +1,7 @@
+.testing div {
+    background: #af0000;
+}
+
+.testing div:nth-child(even) {
+    background: #0069af;
+}
