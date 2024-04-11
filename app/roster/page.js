@@ -1,19 +1,19 @@
 import roster from './roster.json'
 
-const Group = ({ group }) => {
+/*const Group = ({ group }) => {
     return (
         <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
 
             {group.members.map(member =>
                 <div key={member.name} className='bg-stone-800'>
 
-                    <header className='h-28 w-full' style={{
-                        backgroundImage: `url(/ocs/img/portrait_${member.name}.png)`,
+                    <header className='h-36 w-full' style={{
+                        backgroundImage: `url(/ocs/img/portrait_${member.name.toLowerCase()}.png)`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}>
 
-                        <div className='flex gap-2 p-2 drop-shadow-md font-bold w-full bg-gradient-to-b from-stone-800'>
+                        <div className='flex gap-2 p-2 drop-shadow-md font-bold w-full bg-gradient-to-b from-stone-800 break-words flex-wrap'>
                             <div>
                                 {member.name}
                             </div>
@@ -24,6 +24,40 @@ const Group = ({ group }) => {
                     </header>
 
                     <div className='grow h-40 p-4 overflow-auto'>
+                        <p>{member.description}</p>
+                    </div>
+
+                </div>
+            )}
+
+        </div>
+    )
+}*/
+
+const Group = ({ group }) => {
+    return (
+        <div className='flex flex-wrap gap-4'>
+
+            {group.members.map(member =>
+                <div key={member.name} className='bg-stone-800 w-56 md:w-64 lg:w-80 xl:w-96'>
+
+                    <header className='w-full h-40' style={{
+                        backgroundImage: `url(/ocs/img/portrait_${member.name.toLowerCase()}.png)`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    }}>
+
+                        <div className='flex gap-2 p-2 drop-shadow-md font-bold w-full bg-gradient-to-b from-stone-800 break-words flex-wrap'>
+                            <div>
+                                {member.name}
+                            </div>
+                            <div className='grow text-right'>
+                                {member.position}
+                            </div>
+                        </div>
+                    </header>
+
+                    <div className='grow h-48 p-4 overflow-auto'>
                         <p>{member.description}</p>
                     </div>
 
