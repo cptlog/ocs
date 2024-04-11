@@ -12,6 +12,7 @@ const Group = ({ group }) => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}>
+
                         <div className='flex gap-2 p-2 drop-shadow-md font-bold w-full bg-gradient-to-b from-stone-800'>
                             <div>
                                 {member.name}
@@ -63,8 +64,7 @@ export default function Roster() {
         <main className="flex flex-col gap-4 p-4 m-auto">
             
             <h1>Roster</h1>
-
-            <p>Directory of characters</p>
+            <p>Directory of characters. Under construction.</p>
 
             <Locales locales={roster.locales} />
 
